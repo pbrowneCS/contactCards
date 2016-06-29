@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Cards!</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="contactCards.css">	
+	<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.newUserForm').submit(function(){
+				var userFirst = $('#first_name').val();
+				var userLast = $('#last_name').val();
+				var userDescription = $('#description').val();
+				$('.newContacts').append('<div class="userBox"><div class="userBoxName"><p>first name: </p>' + userFirst + '<br><p>last name: </p>' + userLast + '</div><div class="userBoxDetails"><p>Description: </p>' + userDescription + '</div></div>');
+				return false;
+			});
+		});
+		$(document).on('click','.userBox',function(){
+				$(this).children('.userBoxName').toggle();
+				$(this).children('.userBoxDetails').toggle();
+		});
+    </script>
+</head>
+<body>
+	<div class="container">
+		<div class="col-xs-12">
+			<div class="col-xs-4">
+				<h1>Add Contact</h1>
+				<form class="newUserForm">
+					First Name:<input type="text" id="first_name">
+					<br>
+					Last Name:<input type="text" id="last_name">
+					<br>
+					Description:<textarea class="form-control" rows="4" id="description"></textarea>
+					<br>
+					<input class="btn btn-default" type="submit" value="Submit!">
+				</form>			
+			</div>
+			<div class="col-xs-6 newContacts">
+				<h1>New Contacts</h1>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

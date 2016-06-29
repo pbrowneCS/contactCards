@@ -1,0 +1,41 @@
+*{
+	vertical-align: baseline;
+	font-family: Verdana;
+	font-style: inherit;
+	font-size: inherit;
+	border: 0 none;
+ 	outline: 1px dotted red; 0; 
+	padding: 0;
+	margin: 0; 
+}
+.newContacts{
+	height: 100px;
+	width: 200px;
+}
+.userBox{
+	height: 180px;
+	width: 210px;
+	background-color: grey;
+	padding: 5px;
+	margin: 0px 0px 10px 0px;
+}
+.userBoxName{
+	height: 170px;
+	width: 200px;
+	background-color: white;
+	text-align: center;
+	font-size: 20px;
+}
+.userBoxName p{
+	font-size: 10px;
+}
+.userBoxDetails{
+	height: 170px;
+	width: 200px;
+	background-color: white;
+	font-weight: bold;
+	display: none;
+}
+.userBoxDetails p{
+	font-size: 10px;
+}
